@@ -1,0 +1,9 @@
+<div class="search">
+    <mat-label class="active" for="first_name">Поиск по имени</mat-label>
+    <br>
+    <input matInput class="validate" id="first_name" placeholder="Имя" [(ngModel)]="searchStr">
+</div>
+
+<div class="row">
+    <app-user *ngFor="let u of users | search:searchStr" [user]="u"></app-user>
+</div>
